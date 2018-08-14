@@ -18,3 +18,7 @@ def db(request):
 
     return render(request, 'db.html', {'greetings': greetings})
 
+def signin(request):
+	print("You've successfully signed in!")
+	return render(request, 'signin.html', {'headers': request.headers})
+
