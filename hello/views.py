@@ -20,5 +20,5 @@ def db(request):
 
 def signin(request):
 	print("You've successfully signed in!")
-	return render(request, 'signin.html', {'headers': request.headers})
+	return render(request, 'signin.html', {'headers': request.META})
 
