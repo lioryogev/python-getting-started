@@ -14,5 +14,6 @@ urlpatterns = [
     url(r'^$', hello.views.index, name='index'),
     url(r'^db', hello.views.db, name='db'),
     url(r'^signin', hello.views.signin, name='signin'),
+    url(r'^signout', hello.views.signout, name='signout'),
     path('admin/', admin.site.urls),
 ]
