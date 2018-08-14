@@ -21,8 +21,8 @@ def db(request):
 
 def signin(request):
 	print("You've successfully signed in!")
-	return JsonResponse({'foo':'bar'})
-	# return render(request, 'signin.html', {'headers': request.META})
+	# return JsonResponse({'foo':'bar'})
+	return render(request, 'signin.html', {'headers': request.META})
 
 def signout(request):
 	print("You've successfully signed out!")
