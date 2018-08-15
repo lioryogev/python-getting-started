@@ -29,4 +29,6 @@ def signout(request):
 	return render(request, 'signout.html', {'headers': request.META})
 
 def verifyToken(request):
-	return JsonResponse({'headers': request.META})
+	print("headers:")
+	print(request.META)
+	return JsonResponse({}) #'headers': request.META})
