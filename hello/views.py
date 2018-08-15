@@ -28,3 +28,5 @@ def signout(request):
 	print("You've successfully signed out!")
 	return render(request, 'signout.html', {'headers': request.META})
 
+def verifyToken(request):
+	return JsonResponse({'headers': request.META})

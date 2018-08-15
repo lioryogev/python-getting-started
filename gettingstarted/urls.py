@@ -15,5 +15,6 @@ urlpatterns = [
     url(r'^db', hello.views.db, name='db'),
     url(r'^signin', hello.views.signin, name='signin'),
     url(r'^signout', hello.views.signout, name='signout'),
+    url(f'^verifyToken', hello.views.verifyToken, name='verifyToken'),
     path('admin/', admin.site.urls),
 ]
