@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 
 from .models import Greeting
+from .helpers import AuthHelper
 
 # Create your views here.
 def index(request):
@@ -31,4 +32,9 @@ def signout(request):
 def verifyToken(request):
 	print("headers:")
 	print(request.META)
-	return JsonResponse({}) #'headers': request.META})
+
+	user_info = AuthHelper.verifyToken({'token':request.META['HTTP_AUTHORIZATION']})
+	if user_info:
+		return JsonResponse(user_info)
+	else:
+		return JsonResponse({'error': 'failed to verify token'})
