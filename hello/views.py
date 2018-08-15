@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 
 from .models import Greeting
-from .helpers import AuthHelper
+from .models import AuthHelper
 
 # Create your views here.
 def index(request):

@@ -15,9 +15,11 @@ import time
 from jose import jwk, jwt
 from jose.utils import base64url_decode
 
-# Create your models here.
-class AuthHelper(Object):    
-    def verifyToken(event, context):
+class AuthHelperOrig(object):
+
+
+    @classmethod
+    def verifyToken(cls, event, context):
         region = 'us-east-1'
         userpool_id = 'us-east-1_g7vZomsGY'
         app_client_id = '2pubneliqokqtnlpqdg6jl89sv'
